@@ -1,0 +1,228 @@
+/* ====== NEW SECTION ====== */
+/* Component styles */
+.calendarContainer {
+  z-index: 10;
+  padding: 110px 256px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.calendarAndBookingBody {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.calendarComponentLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 12px;
+}
+
+.calendarBody {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: #ebebf0;
+}
+
+.calendarTitleContainer {
+  display: flex;
+  max-height: 320px;
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.calendarOptionsTitle {
+  color: #555770;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px; /* 175% */
+  text-transform: uppercase;
+}
+
+.calendarTitle {
+  color: #28293d;
+  font-size: 24px;
+  font-style: normal;
+  margin: 0;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+.calendarTitleSubheading {
+  display: inline-flex;
+  align-items: center;
+  color: #555770;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.calendarTimeSlots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+
+.timeSlotButton {
+  display: flex;
+  height: 48px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid #378760;
+  color: #378760;
+  background: #ffffff;
+}
+
+.calendarFooter {
+  display: flex;
+  padding: 15px 30px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  color: #ffffff;
+  background-color: #378760;
+}
+
+a {
+  color: inherit !important;
+}
+
+.calendarAndMenuBox {
+  display: flex;
+  align-self: stretch;
+}
+
+@media only screen and (max-device-width: 780px) {
+  .calendarAndMenuBox {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .calendarContainer {
+    padding: 0px;
+  }
+  .calendarBody {
+    padding: 10px;
+  }
+  .calendarOutline {
+    min-width: 300px !important;
+  }
+}
+
+/* ====== NEW SECTION ====== */
+/* CUSTOM STYLES FOR REACT CALENDAR, USED CLASSNAMES FROM LIB CALENDAR UI AND MODIFY THEM AS PER OUR REQUIREMENTS */
+.react-calendar__month-view > :first-child > :first-child {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.calendarOutline {
+  min-width: 100%;
+  border-radius: 10px;
+  align-self: center;
+  border: 1px solid var(--Dark-Dark-4, #c7c9d9);
+  background: var(--Light-Light-3, #fafafc);
+}
+
+.react-calendar__month-view__weekdays {
+  margin-bottom: 15px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: unset !important;
+}
+
+.react-calendar__month-view__weekdays {
+  display: flex;
+  padding: unset;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.react-calendar__month-view__days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.react-calendar__tile {
+  border-radius: 99px !important;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile--active,
+.react-calendar__tile--hasActive,
+.react-calendar__tile--now .react-calendar__tile:enabled:focus {
+  background: #378760 !important;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  font-size: 14px !important;
+  color: #378760;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.react-calendar__tile,
+.react-calendar__month-view__days__day button {
+  margin: 5px 0px !important;
+}
+
+.react-calendar__tile .react-calendar__month-view__days__day,
+.react-calendar__month-view__days__day--weekend abbr {
+  color: unset;
+  color: #333333;
+}
+
+.react-calendar__tile abbr {
+  font-family: Poppins !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+
+.react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
