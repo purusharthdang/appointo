@@ -10,6 +10,8 @@ Appointo is an app that helps users seamlessly scehdule appointments!
 
 In the project directory, you can run:
 
+### `yarn install`
+
 ### `yarn start`
 
 Runs the app in the development mode.\
