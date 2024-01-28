@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# SidePanda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Appointo is an app that helps users seamlessly scehdule appointments!
+
+1. Select date range.
+2. Select available time slot.
+3. Click on Next!
 
 ## Available Scripts
 
