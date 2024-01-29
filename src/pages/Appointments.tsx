@@ -12,9 +12,11 @@ const Appointments = () => {
     <Layout>
       <Header />
       <div style={{
-        background: 'rgba(249, 250, 251, 0.70)',
+        width: '100vw',
         backdropFilter: 'blur(50px)',
         position: 'relative',
+        backgroundSize: '100% 100%',
+        backgroundImage: "url(/backdrop.jpeg)",
       }}>
         <Toaster position='top-center' />
 
