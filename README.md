@@ -6,6 +6,12 @@ Appointo is an app that helps users seamlessly scehdule appointments!
 2. Select available time slot.
 3. Click on Next!
 
+# HIGHLIGHTS and comments from author
+1. Vscode settings.json added for formatting code on every device.
+2. Custom component library for re-use and reduce work in the future.
+3. I personally would've used tailwindCSS which would make it more concise and readable, but problem mentioned CSS so CSS it is!
+4. My #1 priority is time for development, and readability for other devs!
+
 ## Available Scripts
 
 In the project directory, you can run:
