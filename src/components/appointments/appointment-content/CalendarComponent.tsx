@@ -22,14 +22,16 @@ const CalendarComponent = ({ title, timezone }: CalendarProps) => {
     const [timeSlotVariant, setTimeSlotVariant] = useState<string>('');
     const [selectedTimeSlot, setSelectedTimeSlot] = useState<string>('');
     const [selectedDateRange, setSelectedDateRange] = useState<getTimeSlotPayload>({ startDate: '', endDate: '' });
+    const [selectedDate, setSelectedDate] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
 
     const { isLoading, availableSlots } = useSelector((state: RootState) => state.appointments)
 
     const handleDateChange = (value: any) => {
+        setSelectedDate(dayjs(value).format('YYYY-MM-DD'))
         setSelectedDateRange({
-            startDate: dayjs(value[0]).format('YYYY-MM-DD'),
-            endDate: dayjs(value[1]).format('YYYY-MM-DD')
+            startDate: dayjs(value).startOf('month').format('YYYY-MM-DD'),
+            endDate: dayjs(value).endOf('month').format('YYYY-MM-DD'),
         })
     }
 
@@ -57,6 +59,13 @@ const CalendarComponent = ({ title, timezone }: CalendarProps) => {
         }
         ) : [];
     }, [timeSlotVariant, availableSlots]);
+
+    const slotsFilteredBasedOnDates = useMemo(() => {
+        if (slotsFilterBasedOnVariant.length > 0 && selectedDate) {
+            return slotsFilterBasedOnVariant.filter((dateAndSlot) => dateAndSlot.date === selectedDate);
+        } else return []
+
+    }, [slotsFilterBasedOnVariant, selectedDate])
 
     useEffect(() => {
         if (selectedDateRange.startDate !== '' && selectedDateRange.endDate !== '') {
@@ -96,7 +105,7 @@ const CalendarComponent = ({ title, timezone }: CalendarProps) => {
                     selectedTimeSlot={selectedTimeSlot}
                     setSelectedTimeSlot={setSelectedTimeSlot}
                     setTimeSlotVariant={setTimeSlotVariant}
-                    filteredSlotsResults={slotsFilterBasedOnVariant}
+                    filteredSlotsResults={slotsFilteredBasedOnDates}
                 />
             </div>
             {/* Calendar Footer */}
