@@ -1,5 +1,3 @@
-# SidePanda
-
 Appointo is an app that helps users seamlessly scehdule appointments!
 
 1. Select date range.
