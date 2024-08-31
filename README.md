@@ -1,3 +1,6 @@
+#DEMO
+https://main--bespoke-baklava-c50b2a.netlify.app/
+
 Appointo is an app that helps users seamlessly scehdule appointments!
 
 1. Select date range.
